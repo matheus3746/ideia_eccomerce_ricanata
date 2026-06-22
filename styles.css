@@ -44,9 +44,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, svg {
+img {
   display: block;
   max-width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+  flex-shrink: 0;
 }
 
 a {
@@ -1304,7 +1310,7 @@ ul {
   position: fixed;
   right: 1.25rem;
   bottom: 1.25rem;
-  z-index: 999;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1319,11 +1325,14 @@ ul {
     0 0 0 10px rgba(37, 211, 102, 0.28),
     0 0 0 18px rgba(37, 211, 102, 0.12);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  text-decoration: none;
+  line-height: 0;
 }
 
 .whatsapp-float svg {
-  width: 30px;
-  height: 30px;
+  width: 30px !important;
+  height: 30px !important;
+  max-width: none !important;
   fill: var(--white);
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
 }
