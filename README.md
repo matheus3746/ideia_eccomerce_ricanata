@@ -48,8 +48,7 @@ Seções ilustrativas baseadas nos prints enviados, com placeholders visuais:
 - Tanques para produção
 - Ideal para você
 - Apostilas
-- Depoimento
-- Newsletter
+- Depoimento / avaliações em cards
 
 Produtos, imagens e textos são fictícios/placeholder — servem só para mostrar disposição dos blocos.
 
