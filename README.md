@@ -12,7 +12,7 @@ Página estática de demonstração para apresentar propostas de melhoria de UI/
 ### Top bar (faixa vermelha)
 
 - Removido o texto de login/cadastro.
-- Frase centralizada com mais destaque: **"Valorize seu leite, faça queijo."** (maior, negrito, caixa alta).
+- Frase centralizada com mais destaque: **"A loja virtual mais completa para laticínios"** (maior, negrito, caixa alta).
 - Redes sociais e WhatsApp à **esquerda**, apenas ícones.
 - Telefone fixo à **direita**, único elemento com texto visível.
 
