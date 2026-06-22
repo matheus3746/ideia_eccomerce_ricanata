@@ -65,7 +65,7 @@ Produtos, imagens e textos são fictícios/placeholder — servem só para mostr
 - Breakpoints em 540px, 768px, 900px e 1024px.
 - **Mobile:** produtos em carrossel horizontal com scroll lateral e indicadores (barras verdes), em vez de lista vertical.
 - Grid de produtos no desktop: 1 → 2 → 4 colunas conforme a tela.
-- **Avaliações:** seção estilo cards com carrossel, estrelas, título em destaque, avatar, cidade e produto avaliado.
+- **Avaliações:** cards em carrossel (estrelas, título, texto, avatar e produto) com identidade Rica Nata (vermelho, dourado) e textos genéricos de exemplo.
 - Áreas de toque mínimas nos botões e links.
 - Contraste e hierarquia visual alinhados à identidade vermelha/verde/dourada da marca.
 - Transições suaves no header e nos cards de produto.
