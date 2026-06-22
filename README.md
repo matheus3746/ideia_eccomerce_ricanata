@@ -13,8 +13,7 @@ Página estática de demonstração para apresentar propostas de melhoria de UI/
 
 - Removido o texto de login/cadastro.
 - Frase centralizada com mais destaque: **"A loja virtual mais completa para laticínios"** (maior, negrito, caixa alta).
-- Redes sociais e WhatsApp à **esquerda**, apenas ícones.
-- Telefone fixo à **direita**, único elemento com texto visível.
+- Redes sociais, WhatsApp e telefone fixo agrupados à **direita**; apenas o telefone fixo exibe texto.
 
 ### Header principal
 
@@ -64,7 +63,9 @@ Produtos, imagens e textos são fictícios/placeholder — servem só para mostr
 ### Responsividade e UX
 
 - Breakpoints em 540px, 768px, 900px e 1024px.
-- Grid de produtos: 1 → 2 → 4 colunas conforme a tela.
+- **Mobile:** produtos em carrossel horizontal com scroll lateral e indicadores (barras verdes), em vez de lista vertical.
+- Grid de produtos no desktop: 1 → 2 → 4 colunas conforme a tela.
+- **Avaliações:** seção estilo cards com carrossel, estrelas, título em destaque, avatar, cidade e produto avaliado.
 - Áreas de toque mínimas nos botões e links.
 - Contraste e hierarquia visual alinhados à identidade vermelha/verde/dourada da marca.
 - Transições suaves no header e nos cards de produto.
