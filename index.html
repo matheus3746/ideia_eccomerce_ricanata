@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rica Nata — Demonstração de Layout</title>
-  <link rel="stylesheet" href="styles.css?v=3">
+  <title>Rica Nata | Ingredientes e Equipamentos para Laticínios</title>
+  <meta name="description" content="Fermentos, coalho, equipamentos e insumos para produção de queijos e láticos. Desde 1999, entrega para todo o Brasil.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="styles.css?v=7">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -79,7 +81,7 @@
           <li><a href="#">Kits Análise/Produção</a></li>
           <li><a href="#">Acessórios e Utensílios</a></li>
           <li><a href="#">Cursos e Apostilas</a></li>
-          <li><a href="#">Blog</a></li>
+          <li><a href="#">Guia Lácteo</a></li>
         </ul>
       </div>
     </nav>
@@ -103,10 +105,10 @@
           <div class="hero__equipment"></div>
         </div>
       </div>
-      <div class="hero__dots" aria-hidden="true">
-        <span class="hero__dot hero__dot--active"></span>
-        <span class="hero__dot"></span>
-        <span class="hero__dot"></span>
+      <div class="hero__dots" role="tablist" aria-label="Slides do banner">
+        <button type="button" class="hero__dot hero__dot--active" aria-label="Slide 1" aria-current="true"></button>
+        <button type="button" class="hero__dot" aria-label="Slide 2"></button>
+        <button type="button" class="hero__dot" aria-label="Slide 3"></button>
       </div>
     </section>
 
@@ -310,6 +312,56 @@
       </div>
     </section>
 
+    <!-- Guia Lácteo — posts fictícios -->
+    <section class="guia-lacteo" aria-label="Guia Lácteo — artigos e receitas">
+      <div class="container">
+        <h2 class="section-title">Guia Lácteo</h2>
+        <p class="guia-lacteo__intro">Receitas, técnicas e conteúdo educacional para quem produz lácteos com qualidade.</p>
+        <div class="guia-lacteo__grid">
+
+          <article class="guia-card">
+            <div class="guia-card__image guia-card__image--1" aria-hidden="true"></div>
+            <div class="guia-card__body">
+              <span class="guia-card__tag">Técnica</span>
+              <h3 class="guia-card__title">Como escolher o fermento certo para cada tipo de queijo</h3>
+              <p class="guia-card__excerpt">Entenda a diferença entre fermentos mesófilos e termófilos e como isso impacta o sabor e a textura do seu produto.</p>
+              <div class="guia-card__footer">
+                <time class="guia-card__date">15 Jun 2026 (exemplo)</time>
+                <a href="#" class="guia-card__link">Ler mais →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="guia-card">
+            <div class="guia-card__image guia-card__image--2" aria-hidden="true"></div>
+            <div class="guia-card__body">
+              <span class="guia-card__tag">Receita</span>
+              <h3 class="guia-card__title">Ricota cremosa caseira — passo a passo</h3>
+              <p class="guia-card__excerpt">Com apenas leite integral, ácido cítrico e um termômetro você consegue produzir uma ricota firme e saborosa em casa.</p>
+              <div class="guia-card__footer">
+                <time class="guia-card__date">02 Jun 2026 (exemplo)</time>
+                <a href="#" class="guia-card__link">Ler mais →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="guia-card">
+            <div class="guia-card__image guia-card__image--3" aria-hidden="true"></div>
+            <div class="guia-card__body">
+              <span class="guia-card__tag">Equipamentos</span>
+              <h3 class="guia-card__title">Coalho líquido ou em pó — qual usar na sua queijaria?</h3>
+              <p class="guia-card__excerpt">Comparamos dosagem, praticidade e rendimento dos dois formatos para ajudar você a tomar a melhor decisão.</p>
+              <div class="guia-card__footer">
+                <time class="guia-card__date">20 Mai 2026 (exemplo)</time>
+                <a href="#" class="guia-card__link">Ler mais →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
     <!-- Avaliações -->
     <section class="reviews" aria-label="Avaliações em destaque">
       <div class="container">
@@ -358,7 +410,109 @@
       </div>
     </section>
 
+    <!-- Por que nos escolher -->
+    <section class="why-us" aria-label="Por que nos escolher">
+      <div class="container">
+        <h2 class="section-title">Por que nos escolher?</h2>
+        <div class="why-us__grid">
+
+          <div class="why-us__item">
+            <div class="why-us__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            </div>
+            <h3 class="why-us__title">Desde 1999</h3>
+            <p class="why-us__desc">Mais de 25 anos de experiência no fornecimento de insumos para queijarias artesanais e industriais em todo o Brasil.</p>
+          </div>
+
+          <div class="why-us__item">
+            <div class="why-us__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3 class="why-us__title">Entrega para todo o Brasil</h3>
+            <p class="why-us__desc">Enviamos para todos os estados. Rastreamento em tempo real e prazos ágeis para você não parar sua produção.</p>
+          </div>
+
+          <div class="why-us__item">
+            <div class="why-us__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h3 class="why-us__title">Ingredientes com procedência</h3>
+            <p class="why-us__desc">Fermentos, coalhos e insumos com origem declarada e rastreável, selecionados junto aos melhores fabricantes do setor.</p>
+          </div>
+
+          <div class="why-us__item">
+            <div class="why-us__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 11H7V9h2v2zm4 0h-2V9h2v2zm4 0h-2V9h2v2z"/></svg>
+            </div>
+            <h3 class="why-us__title">Suporte técnico especializado</h3>
+            <p class="why-us__desc">Nossa equipe está disponível para tirar dúvidas sobre dosagens, processos e escolha de equipamentos via WhatsApp.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ técnico (exemplo — relatório SEO) -->
+    <section class="faq-section" aria-label="FAQ técnico de exemplo">
+      <div class="container">
+        <h2 class="section-title">FAQ Técnico (exemplo)</h2>
+        <p class="faq-section__intro">Modelo sugerido para páginas de produto com intenção informacional, inspirado no quick view do site. Textos fictícios.</p>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Para que serve este fermento? (exemplo)</summary>
+            <p>Fermento para produção de queijos com olhaduras. Indicado para fabricação artesanal e semi-industrial de laticínios.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Como escolher a dosagem por volume de leite? (exemplo)</summary>
+            <p>Selecione a opção conforme o volume produzido (20 L, 50 L, 100 L, etc.). A dosagem já vem ajustada para a quantidade escolhida.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Como armazenar e qual a validade? (exemplo)</summary>
+            <p>Manter em local fresco, seco e ao abrigo da luz. Após aberto, utilizar conforme orientação do fabricante na embalagem.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Referência e fabricante (exemplo)</summary>
+            <p>Referência: CIE00000 · Modelo/Marca: Ciência do Leite · Fabricante: Ciência do Leite Ltda.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <!-- Trust badges (padrão Iset) -->
+  <div class="trust-strip" aria-label="Garantias da loja">
+    <div class="container trust-strip__inner">
+      <div class="trust-badge">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l3.09 6.26L22 8.27l-5 4.87 1.18 6.88L12 16.77l-6.18 3.25L7 13.14 2 8.27l6.91-1.01L12 1z"/></svg>
+        <div>
+          <strong>Compra 100% Segura</strong>
+          <span>Ambiente protegido e criptografado</span>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <div>
+          <strong>Entrega Rápida</strong>
+          <span>Envio imediato com rastreamento</span>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        <div>
+          <strong>Frete Grátis</strong>
+          <span>Para compras acima de R$ 299</span>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 11H7V9h2v2zm4 0h-2V9h2v2zm4 0h-2V9h2v2z"/></svg>
+        <div>
+          <strong>Atendimento via WhatsApp</strong>
+          <span>Suporte técnico especializado</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Rodapé -->
   <footer class="site-footer">

@@ -28,7 +28,17 @@ Página estática de demonstração para apresentar propostas de melhoria de UI/
   - **Prensas** incorporado em **Equipamentos**
   - **Laboratório** incorporado em **Acessórios e Utensílios**
 - Menu hambúrguer no mobile com categorias em lista vertical.
+- **Blog** substituído por **Tecnologia e Receitas** (diretriz SEO/conteúdo).
 - No desktop, itens distribuídos horizontalmente com espaçamento equilibrado.
+
+### SEO (referência do relatório)
+
+- **Title tag:** `Rica Nata | Ingredientes e Equipamentos para Laticínios`
+- **Meta description:** ~150 caracteres, foco em conversão e mercado
+- **Navbar:** "Tecnologia e Receitas" no lugar de "Blog"
+- **Tap targets do banner:** dots com área de clique 48×48 px
+- **FAQ técnico:** bloco de exemplo entre avaliações e rodapé (modelo para páginas de produto)
+- Demo marcada com `noindex` para não competir com o site oficial no Google
 
 ### Header fixo ao rolar (sticky)
 
@@ -49,6 +59,7 @@ Seções ilustrativas baseadas nos prints enviados, com placeholders visuais:
 - Ideal para você
 - Apostilas
 - Depoimento / avaliações em cards
+- FAQ técnico (exemplo)
 
 Produtos, imagens e textos são fictícios/placeholder — servem só para mostrar disposição dos blocos.
 
@@ -68,6 +79,25 @@ Produtos, imagens e textos são fictícios/placeholder — servem só para mostr
 - Áreas de toque mínimas nos botões e links.
 - Contraste e hierarquia visual alinhados à identidade vermelha/verde/dourada da marca.
 - Transições suaves no header e nos cards de produto.
+
+---
+
+## O que enviar para evoluirmos a demo
+
+Para montarmos as próximas telas, estes materiais ajudam muito:
+
+| Prioridade | Página / tela | Por quê |
+|---|---|---|
+| Alta | **Página de produto** (ex.: coalho líquido, fermento iogurte) | FAQ técnico, fotos, title/meta únicos, produtos sugeridos |
+| Alta | **Listagem de categoria** (Fermentos, Ingredientes) | Grid mobile, filtros, CLS das imagens |
+| Alta | **Home real** (print ou HTML) | Comparar banners, seções e ordem dos blocos |
+| Média | **Tecnologia e Receitas / Blog** | Layout de artigo + bloco "produtos sugeridos" |
+| Média | **Carrinho e checkout** | Tap targets, fluxo mobile |
+| Média | **Busca** (resultados vazios e com itens) | UX informacional |
+| Baixa | **Páginas institucionais** (Quem somos, políticas) | Rodapé e links internos |
+| Extra | **Planilha/export SEO** (URLs top tráfego, titles atuais) | Manter URLs e corrigir duplicatas |
+
+**Formato ideal:** prints mobile + desktop, URL da página, e (se tiver) title/meta description atuais cadastrados na Iset.
 
 ---
 
