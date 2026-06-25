@@ -6,7 +6,7 @@
   <title>Rica Nata | Ingredientes e Equipamentos para Laticínios</title>
   <meta name="description" content="Fermentos, coalho, equipamentos e insumos para produção de queijos e láticos. Desde 1999, entrega para todo o Brasil.">
   <meta name="robots" content="noindex, nofollow">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=13">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -70,18 +70,163 @@
       </div>
     </div>
 
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay" aria-hidden="true"></div>
+
     <!-- Navbar -->
     <nav class="navbar" id="navbar" aria-label="Categorias">
-      <div class="container">
+      <div class="mobile-menu-login">
+        <p>Olá, <a href="#">faça seu login</a> ou <a href="#">cadastre-se</a></p>
+        <button type="button" class="mobile-menu__close" id="mobileMenuClose" aria-label="Fechar menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.3 5.7a1 1 0 00-1.4-1.4L12 9.17 7.1 4.3a1 1 0 10-1.4 1.42L10.6 10.6 5.7 15.5a1 1 0 101.42 1.4L12 12.01l4.88 4.89a1 1 0 001.42-1.42l-4.9-4.9 4.9-4.88z"/></svg>
+        </button>
+      </div>
+      <div class="container navbar__container">
         <ul class="navbar__list" id="navbarList">
-          <li><a href="#">Equipamentos</a></li>
-          <li><a href="#">Fôrmas e Dessoradores</a></li>
-          <li><a href="#">Fermentos Lácteos</a></li>
-          <li><a href="#">Ingredientes</a></li>
-          <li><a href="#">Kits Análise/Produção</a></li>
-          <li><a href="#">Acessórios e Utensílios</a></li>
-          <li><a href="#">Cursos e Apostilas</a></li>
-          <li><a href="#">Guia Lácteo</a></li>
+
+          <li class="navbar__item navbar__item--dropdown">
+            <button type="button" class="navbar__link navbar__trigger" aria-expanded="false" aria-haspopup="true">
+              Equipamentos
+              <svg class="navbar__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="navbar__dropdown">
+              <ul class="navbar__submenu">
+                <li><a href="#">Iogurteira</a></li>
+                <li><a href="#">Lava botas</a></li>
+                <li><a href="#">Pia e Lavatório inox</a></li>
+                <li><a href="#">Tachos</a></li>
+                <li><a href="#">Tanque de Queijo</a></li>
+                <li class="navbar__group"><span>Prensas</span></li>
+                <li><a href="#">Queijo Minas Padrão, Meia cura e Cobocó</a></li>
+                <li><a href="#">Queijo Coalho e Prato</a></li>
+                <li><a href="#">Queijo Parmesão</a></li>
+                <li><a href="#">Queijo Reino Bola</a></li>
+              </ul>
+              <a href="#" class="navbar__view-all">Ver tudo de Equipamentos (9) →</a>
+            </div>
+          </li>
+
+          <li class="navbar__item navbar__item--dropdown">
+            <button type="button" class="navbar__link navbar__trigger" aria-expanded="false" aria-haspopup="true">
+              Fôrmas e Dessoradores
+              <svg class="navbar__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="navbar__dropdown">
+              <ul class="navbar__submenu">
+                <li><a href="#">Minas Padrão/Canastra</a></li>
+                <li><a href="#">Coalho e Prato</a></li>
+                <li><a href="#">Parmesão</a></li>
+                <li><a href="#">Mussarela/Requeijão</a></li>
+                <li><a href="#">Queijo Frescal</a></li>
+                <li><a href="#">Queijo Reino</a></li>
+              </ul>
+              <a href="#" class="navbar__view-all">Ver tudo de Fôrmas e Dessoradores (6) →</a>
+            </div>
+          </li>
+
+          <li class="navbar__item navbar__item--dropdown">
+            <button type="button" class="navbar__link navbar__trigger" aria-expanded="false" aria-haspopup="true">
+              Fermentos Lácteos
+              <svg class="navbar__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="navbar__dropdown">
+              <ul class="navbar__submenu">
+                <li><a href="#">Iogurte e Bebida láctea</a></li>
+                <li><a href="#">Queijo Minas Padrão, Meia Cura e Coalhada</a></li>
+                <li><a href="#">Mussarela e Parmesão</a></li>
+                <li><a href="#">Queijo Minas Frescal e Queijo Coalho</a></li>
+                <li><a href="#">Queijo Reino e Queijo com Olhadura</a></li>
+                <li><a href="#">Queijo de Búfala</a></li>
+              </ul>
+              <a href="#" class="navbar__view-all">Ver tudo de Fermentos Lácteos (6) →</a>
+            </div>
+          </li>
+
+          <li class="navbar__item navbar__item--dropdown navbar__item--wide">
+            <button type="button" class="navbar__link navbar__trigger" aria-expanded="false" aria-haspopup="true">
+              Ingredientes
+              <svg class="navbar__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="navbar__dropdown navbar__dropdown--cols">
+              <ul class="navbar__submenu">
+                <li><a href="#">Adoçantes</a></li>
+                <li><a href="#">Cloreto de Cálcio</a></li>
+                <li><a href="#">Conservantes</a></li>
+                <li><a href="#">Amidos</a></li>
+                <li><a href="#">Gomas</a></li>
+                <li><a href="#">Polpa de frutas</a></li>
+              </ul>
+              <ul class="navbar__submenu">
+                <li><a href="#">Saborizantes</a></li>
+                <li><a href="#">Coagulantes</a></li>
+                <li><a href="#">Corantes</a></li>
+                <li><a href="#">Estabilizantes</a></li>
+                <li><a href="#">Lactase</a></li>
+                <li><a href="#">Sal fundente</a></li>
+              </ul>
+              <a href="#" class="navbar__view-all">Ver tudo de Ingredientes (12) →</a>
+            </div>
+          </li>
+
+          <li class="navbar__item navbar__item--dropdown">
+            <button type="button" class="navbar__link navbar__trigger" aria-expanded="false" aria-haspopup="true">
+              Kits Análise/Produção
+              <svg class="navbar__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="navbar__dropdown">
+              <ul class="navbar__submenu">
+                <li><a href="#">Kit Análise</a></li>
+                <li><a href="#">Kit Prensa</a></li>
+                <li><a href="#">Kit Liras</a></li>
+                <li><a href="#">Kit Formas</a></li>
+                <li><a href="#">Kit Artesanal</a></li>
+              </ul>
+              <a href="#" class="navbar__view-all">Ver tudo de Kits (5) →</a>
+            </div>
+          </li>
+
+          <li class="navbar__item navbar__item--dropdown navbar__item--wide">
+            <button type="button" class="navbar__link navbar__trigger" aria-expanded="false" aria-haspopup="true">
+              Acessórios e Utensílios
+              <svg class="navbar__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="navbar__dropdown">
+              <ul class="navbar__submenu">
+                <li><a href="#">Em Inox</a></li>
+                <li><a href="#">Em Plástico</a></li>
+                <li><a href="#">Latões</a></li>
+                <li><a href="#">Pá Mexedora</a></li>
+                <li><a href="#">Caixas</a></li>
+                <li><a href="#">Liras Para Corte de Massa</a></li>
+                <li><a href="#">Caldeirão de Alumínio</a></li>
+                <li><a href="#">Baldes e Coadores</a></li>
+                <li><a href="#">EPI</a></li>
+                <li class="navbar__group"><span>Laboratório</span></li>
+                <li><a href="#">Análise e Medição</a></li>
+                <li><a href="#">Soluções e Reagentes</a></li>
+                <li><a href="#">Vidraria</a></li>
+              </ul>
+              <a href="#" class="navbar__view-all">Ver tudo de Acessórios (12) →</a>
+            </div>
+          </li>
+
+          <li class="navbar__item navbar__item--dropdown">
+            <button type="button" class="navbar__link navbar__trigger" aria-expanded="false" aria-haspopup="true">
+              Cursos e Apostilas
+              <svg class="navbar__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+            </button>
+            <div class="navbar__dropdown">
+              <ul class="navbar__submenu">
+                <li><a href="#">Cursos de Queijo</a></li>
+                <li><a href="#">Apostilas de queijo</a></li>
+              </ul>
+              <a href="#" class="navbar__view-all">Ver tudo de Cursos e Apostilas (2) →</a>
+            </div>
+          </li>
+
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Portal Lácteo</a>
+          </li>
+
         </ul>
       </div>
     </nav>
@@ -164,6 +309,55 @@
             <span class="product-scroll__bar"></span>
             <span class="product-scroll__bar"></span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navegar por Kits -->
+    <section class="kits-browse" aria-label="Navegar por kits">
+      <div class="container">
+        <h2 class="section-title">Navegar por Kits</h2>
+        <div class="kits-carousel">
+          <button type="button" class="kits-carousel__nav kits-carousel__nav--prev" id="kitsPrev" aria-label="Kits anteriores">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+          </button>
+          <div class="kits-carousel__track" id="kitsTrack">
+            <a href="#" class="kit-card">
+              <div class="kit-card__logo kit-card__logo--1" aria-hidden="true"></div>
+              <span class="kit-card__name">Kit Queijo Artesanal</span>
+            </a>
+            <a href="#" class="kit-card">
+              <div class="kit-card__logo kit-card__logo--2" aria-hidden="true"></div>
+              <span class="kit-card__name">Kit Queijos Cremosos</span>
+            </a>
+            <a href="#" class="kit-card">
+              <div class="kit-card__logo kit-card__logo--3" aria-hidden="true"></div>
+              <span class="kit-card__name">Kit Análise</span>
+            </a>
+            <a href="#" class="kit-card">
+              <div class="kit-card__logo kit-card__logo--4" aria-hidden="true"></div>
+              <span class="kit-card__name">Kit Prensa</span>
+            </a>
+            <a href="#" class="kit-card">
+              <div class="kit-card__logo kit-card__logo--5" aria-hidden="true"></div>
+              <span class="kit-card__name">Kit Liras</span>
+            </a>
+            <a href="#" class="kit-card">
+              <div class="kit-card__logo kit-card__logo--6" aria-hidden="true"></div>
+              <span class="kit-card__name">Kit Formas</span>
+            </a>
+            <a href="#" class="kit-card">
+              <div class="kit-card__logo kit-card__logo--7" aria-hidden="true"></div>
+              <span class="kit-card__name">Kit Artesanal</span>
+            </a>
+            <a href="#" class="kit-card">
+              <div class="kit-card__logo kit-card__logo--8" aria-hidden="true"></div>
+              <span class="kit-card__name">Eu Faço Queijo</span>
+            </a>
+          </div>
+          <button type="button" class="kits-carousel__nav kits-carousel__nav--next" id="kitsNext" aria-label="Próximos kits">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+          </button>
         </div>
       </div>
     </section>
@@ -312,10 +506,10 @@
       </div>
     </section>
 
-    <!-- Guia Lácteo — posts fictícios -->
-    <section class="guia-lacteo" aria-label="Guia Lácteo — artigos e receitas">
+    <!-- Portal Lácteo — posts fictícios -->
+    <section class="guia-lacteo" aria-label="Portal Lácteo — artigos e receitas">
       <div class="container">
-        <h2 class="section-title">Guia Lácteo</h2>
+        <h2 class="section-title">Portal Lácteo</h2>
         <p class="guia-lacteo__intro">Receitas, técnicas e conteúdo educacional para quem produz lácteos com qualidade.</p>
         <div class="guia-lacteo__grid">
 
@@ -546,6 +740,14 @@
 
         <div class="footer-col footer-col--contact">
           <h3>Contatos</h3>
+          <address class="footer-address">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+            <span>
+              Rua Alfredo Greco, nº 740 — Porteiras<br>
+              Piracema — MG<br>
+              CNPJ 03.241.334/0001-45
+            </span>
+          </address>
           <div class="footer-contact-list">
             <a href="tel:+553733341618">
               <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
@@ -563,11 +765,50 @@
         </div>
 
       </div>
+
+      <div class="footer-extras">
+        <div class="footer-extra-block footer-extra-block--shipping">
+          <h3>Transportadoras parceiras</h3>
+          <p class="footer-extra-block__hint">Enviamos para todo o Brasil com rastreamento em tempo real.</p>
+          <div class="track-order track-order--footer" id="trackOrder">
+            <button type="button" class="track-order__trigger track-order__trigger--footer" id="trackOrderTrigger" aria-expanded="false" aria-haspopup="true" aria-controls="trackOrderPopover">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              Rastreie seu pedido
+            </button>
+            <div class="track-order__popover track-order__popover--footer" id="trackOrderPopover" role="dialog" aria-label="Selecione a transportadora" hidden>
+              <p class="track-order__popover-title">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                Selecione a transportadora
+              </p>
+              <div class="track-order__carriers">
+                <a href="https://rastreamento.correios.com.br/" class="carrier-card carrier-card--correios" target="_blank" rel="noopener noreferrer">Correios</a>
+                <a href="https://www.braspress.com/site/rastreamento/" class="carrier-card carrier-card--braspress" target="_blank" rel="noopener noreferrer">Braspress</a>
+                <a href="https://www.jadlog.com.br/portal/rastreamento" class="carrier-card carrier-card--jadlog" target="_blank" rel="noopener noreferrer">Jadlog</a>
+                <a href="https://mandae.com.br/rastreamento/" class="carrier-card carrier-card--mandae" target="_blank" rel="noopener noreferrer">Mandaê</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-extra-block footer-extra-block--payments">
+          <h3>Meios de pagamento</h3>
+          <ul class="footer-payments" aria-label="Formas de pagamento aceitas">
+            <li class="pay-badge pay-badge--elo">Elo</li>
+            <li class="pay-badge pay-badge--master">Mastercard</li>
+            <li class="pay-badge pay-badge--visa">Visa</li>
+            <li class="pay-badge pay-badge--amex">Amex</li>
+            <li class="pay-badge pay-badge--diners">Diners</li>
+            <li class="pay-badge pay-badge--hiper">Hipercard</li>
+            <li class="pay-badge pay-badge--boleto">Boleto</li>
+            <li class="pay-badge pay-badge--pix">Pix</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="footer-bottom">
       <div class="container footer-bottom__inner">
-        <p>Rica Nata — Todos os direitos reservados. CNPJ 00.000.000/0001-00. Preços e estoque sujeitos a alteração sem aviso prévio.</p>
+        <p>Rica Nata — Todos os direitos reservados. CNPJ 03.241.334/0001-45. Preços e estoque sujeitos a alteração sem aviso prévio.</p>
         <span class="footer-bottom__platform">Demonstração de layout — não é o site oficial</span>
       </div>
     </div>
@@ -585,6 +826,33 @@
       var spacer = document.getElementById('headerSpacer');
       var toggle = document.getElementById('menuToggle');
       var navbar = document.getElementById('navbar');
+      var overlay = document.getElementById('mobileMenuOverlay');
+      var closeBtn = document.getElementById('mobileMenuClose');
+
+      function isMobileMenu() {
+        return window.matchMedia('(max-width: 767px)').matches;
+      }
+
+      function closeSubmenus() {
+        document.querySelectorAll('.navbar__item.is-open').forEach(function (el) {
+          el.classList.remove('is-open');
+          var t = el.querySelector('.navbar__trigger');
+          if (t) t.setAttribute('aria-expanded', 'false');
+        });
+      }
+
+      function setMobileMenuOpen(open) {
+        navbar.classList.toggle('is-open', open);
+        header.classList.toggle('menu-active', open && isMobileMenu());
+        toggle.setAttribute('aria-expanded', open);
+        document.body.classList.toggle('menu-open', open && isMobileMenu());
+        if (overlay) {
+          overlay.classList.toggle('is-visible', open && isMobileMenu());
+          overlay.setAttribute('aria-hidden', !(open && isMobileMenu()));
+        }
+        if (!open) closeSubmenus();
+        updateSpacer();
+      }
 
       function updateSpacer() {
         spacer.style.height = header.offsetHeight + 'px';
@@ -600,10 +868,88 @@
       window.addEventListener('scroll', onScroll, { passive: true });
 
       toggle.addEventListener('click', function () {
-        var open = navbar.classList.toggle('is-open');
-        toggle.setAttribute('aria-expanded', open);
-        updateSpacer();
+        setMobileMenuOpen(!navbar.classList.contains('is-open'));
       });
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function () {
+          setMobileMenuOpen(false);
+        });
+      }
+
+      if (overlay) {
+        overlay.addEventListener('click', function () {
+          setMobileMenuOpen(false);
+        });
+      }
+
+      document.querySelectorAll('.navbar__trigger').forEach(function (trigger) {
+        trigger.addEventListener('click', function (e) {
+          if (window.matchMedia('(min-width: 768px)').matches) return;
+          e.preventDefault();
+          e.stopPropagation();
+          var item = trigger.closest('.navbar__item');
+          var isOpen = item.classList.contains('is-open');
+          document.querySelectorAll('.navbar__item.is-open').forEach(function (el) {
+            el.classList.remove('is-open');
+            var t = el.querySelector('.navbar__trigger');
+            if (t) t.setAttribute('aria-expanded', 'false');
+          });
+          if (!isOpen) {
+            item.classList.add('is-open');
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      var kitsTrack = document.getElementById('kitsTrack');
+      var kitsNext = document.getElementById('kitsNext');
+      var kitsPrev = document.getElementById('kitsPrev');
+      var kitsScrollStep = function () {
+        return kitsTrack ? kitsTrack.offsetWidth * 0.7 : 0;
+      };
+
+      if (kitsTrack && kitsNext) {
+        kitsNext.addEventListener('click', function () {
+          kitsTrack.scrollBy({ left: kitsScrollStep(), behavior: 'smooth' });
+        });
+      }
+
+      if (kitsTrack && kitsPrev) {
+        kitsPrev.addEventListener('click', function () {
+          kitsTrack.scrollBy({ left: -kitsScrollStep(), behavior: 'smooth' });
+        });
+      }
+
+      var trackOrder = document.getElementById('trackOrder');
+      var trackTrigger = document.getElementById('trackOrderTrigger');
+      var trackPopover = document.getElementById('trackOrderPopover');
+
+      if (trackOrder && trackTrigger && trackPopover) {
+        trackTrigger.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var open = trackOrder.classList.toggle('is-open');
+          trackTrigger.setAttribute('aria-expanded', open);
+          trackPopover.hidden = !open;
+        });
+
+        document.addEventListener('click', function (e) {
+          if (!trackOrder.contains(e.target)) {
+            trackOrder.classList.remove('is-open');
+            trackTrigger.setAttribute('aria-expanded', 'false');
+            trackPopover.hidden = true;
+          }
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && trackOrder.classList.contains('is-open')) {
+            trackOrder.classList.remove('is-open');
+            trackTrigger.setAttribute('aria-expanded', 'false');
+            trackPopover.hidden = true;
+            trackTrigger.focus();
+          }
+        });
+      }
 
       document.querySelectorAll('.product-scroll').forEach(function (wrap) {
         var grid = wrap.querySelector('.product-grid, .product-grid--3');
