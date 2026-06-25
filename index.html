@@ -6,7 +6,7 @@
   <title>Rica Nata | Ingredientes e Equipamentos para Laticínios</title>
   <meta name="description" content="Fermentos, coalho, equipamentos e insumos para produção de queijos e láticos. Desde 1999, entrega para todo o Brasil.">
   <meta name="robots" content="noindex, nofollow">
-  <link rel="stylesheet" href="styles.css?v=13">
+  <link rel="stylesheet" href="styles.css?v=14">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -95,11 +95,18 @@
                 <li><a href="#">Pia e Lavatório inox</a></li>
                 <li><a href="#">Tachos</a></li>
                 <li><a href="#">Tanque de Queijo</a></li>
-                <li class="navbar__group"><span>Prensas</span></li>
-                <li><a href="#">Queijo Minas Padrão, Meia cura e Cobocó</a></li>
-                <li><a href="#">Queijo Coalho e Prato</a></li>
-                <li><a href="#">Queijo Parmesão</a></li>
-                <li><a href="#">Queijo Reino Bola</a></li>
+                <li class="navbar__subgroup navbar__subgroup--dropdown">
+                  <button type="button" class="navbar__subtrigger" aria-expanded="false" aria-haspopup="true">
+                    Prensas
+                    <svg class="navbar__subchevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+                  </button>
+                  <ul class="navbar__submenu navbar__submenu--nested">
+                    <li><a href="#">Queijo Minas Padrão, Meia cura e Cobocó</a></li>
+                    <li><a href="#">Queijo Coalho e Prato</a></li>
+                    <li><a href="#">Queijo Parmesão</a></li>
+                    <li><a href="#">Queijo Reino Bola</a></li>
+                  </ul>
+                </li>
               </ul>
               <a href="#" class="navbar__view-all">Ver tudo de Equipamentos (9) →</a>
             </div>
@@ -200,10 +207,17 @@
                 <li><a href="#">Caldeirão de Alumínio</a></li>
                 <li><a href="#">Baldes e Coadores</a></li>
                 <li><a href="#">EPI</a></li>
-                <li class="navbar__group"><span>Laboratório</span></li>
-                <li><a href="#">Análise e Medição</a></li>
-                <li><a href="#">Soluções e Reagentes</a></li>
-                <li><a href="#">Vidraria</a></li>
+                <li class="navbar__subgroup navbar__subgroup--dropdown">
+                  <button type="button" class="navbar__subtrigger" aria-expanded="false" aria-haspopup="true">
+                    Laboratório
+                    <svg class="navbar__subchevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+                  </button>
+                  <ul class="navbar__submenu navbar__submenu--nested">
+                    <li><a href="#">Análise e Medição</a></li>
+                    <li><a href="#">Soluções e Reagentes</a></li>
+                    <li><a href="#">Vidraria</a></li>
+                  </ul>
+                </li>
               </ul>
               <a href="#" class="navbar__view-all">Ver tudo de Acessórios (12) →</a>
             </div>
@@ -224,7 +238,7 @@
           </li>
 
           <li class="navbar__item">
-            <a href="#" class="navbar__link">Portal Lácteo</a>
+            <a href="#" class="navbar__link">Tecnologia Láctea</a>
           </li>
 
         </ul>
@@ -506,10 +520,10 @@
       </div>
     </section>
 
-    <!-- Portal Lácteo — posts fictícios -->
-    <section class="guia-lacteo" aria-label="Portal Lácteo — artigos e receitas">
+    <!-- Tecnologia Láctea — posts fictícios -->
+    <section class="guia-lacteo" aria-label="Tecnologia Láctea — artigos e receitas">
       <div class="container">
-        <h2 class="section-title">Portal Lácteo</h2>
+        <h2 class="section-title">Tecnologia Láctea</h2>
         <p class="guia-lacteo__intro">Receitas, técnicas e conteúdo educacional para quem produz lácteos com qualidade.</p>
         <div class="guia-lacteo__grid">
 
@@ -839,6 +853,11 @@
           var t = el.querySelector('.navbar__trigger');
           if (t) t.setAttribute('aria-expanded', 'false');
         });
+        document.querySelectorAll('.navbar__subgroup.is-open').forEach(function (el) {
+          el.classList.remove('is-open');
+          var st = el.querySelector('.navbar__subtrigger');
+          if (st) st.setAttribute('aria-expanded', 'false');
+        });
       }
 
       function setMobileMenuOpen(open) {
@@ -895,8 +914,35 @@
             var t = el.querySelector('.navbar__trigger');
             if (t) t.setAttribute('aria-expanded', 'false');
           });
+          document.querySelectorAll('.navbar__subgroup.is-open').forEach(function (el) {
+            el.classList.remove('is-open');
+            var st = el.querySelector('.navbar__subtrigger');
+            if (st) st.setAttribute('aria-expanded', 'false');
+          });
           if (!isOpen) {
             item.classList.add('is-open');
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      document.querySelectorAll('.navbar__subtrigger').forEach(function (trigger) {
+        trigger.addEventListener('click', function (e) {
+          if (window.matchMedia('(min-width: 768px)').matches) return;
+          e.preventDefault();
+          e.stopPropagation();
+          var subgroup = trigger.closest('.navbar__subgroup');
+          var parentDropdown = trigger.closest('.navbar__dropdown');
+          var isOpen = subgroup.classList.contains('is-open');
+          if (parentDropdown) {
+            parentDropdown.querySelectorAll('.navbar__subgroup.is-open').forEach(function (el) {
+              el.classList.remove('is-open');
+              var st = el.querySelector('.navbar__subtrigger');
+              if (st) st.setAttribute('aria-expanded', 'false');
+            });
+          }
+          if (!isOpen) {
+            subgroup.classList.add('is-open');
             trigger.setAttribute('aria-expanded', 'true');
           }
         });
