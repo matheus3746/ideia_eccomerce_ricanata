@@ -1741,6 +1741,115 @@ a.navbar__link {
   line-height: 1.6;
 }
 
+.faq-page {
+  padding: 2rem 0 3.5rem;
+  background: var(--gray-100);
+  min-height: 50vh;
+}
+
+.faq-page__header {
+  margin-bottom: 2rem;
+}
+
+.faq-page__intro {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  max-width: 560px;
+  margin: -1rem auto 0;
+}
+
+.faq-search {
+  position: relative;
+  max-width: 560px;
+  margin: 0 auto 1.5rem;
+}
+
+.faq-search__input {
+  width: 100%;
+  padding: 0.75rem 2.75rem 0.75rem 1rem;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  background: var(--white);
+  font-family: inherit;
+  font-size: 0.9375rem;
+  color: var(--gray-900);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.faq-search__input:focus {
+  outline: none;
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.12);
+}
+
+.faq-search__input::placeholder {
+  color: var(--gray-600);
+}
+
+.faq-search__clear {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--gray-100);
+  color: var(--gray-600);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.faq-search__clear:hover {
+  background: var(--gray-200);
+  color: var(--gray-900);
+}
+
+.faq-page__results {
+  max-width: 800px;
+  margin: -0.5rem auto 1rem;
+  font-size: 0.8125rem;
+  color: var(--gray-600);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.faq-list--page {
+  max-width: 800px;
+}
+
+.faq-page__category {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--red);
+  margin: 1.75rem 0 0.75rem;
+}
+
+.faq-page__category:first-child {
+  margin-top: 0;
+}
+
+.navbar__link--active {
+  opacity: 1;
+  box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.85);
+}
+
 /* ========== AVALIAÇÕES ========== */
 
 .reviews {
