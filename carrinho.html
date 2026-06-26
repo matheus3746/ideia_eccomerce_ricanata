@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu carrinho | Rica Nata</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="styles.css?v=15">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="cart-page">
+
+  <header class="site-header is-scrolled cart-page__header">
+    <div class="main-header">
+      <div class="container main-header__inner main-header__inner--cart">
+        <a href="index.html" class="menu-toggle menu-toggle--back" aria-label="Continuar comprando">
+          <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        </a>
+        <h1 class="cart-page__title">Seu carrinho (<span id="cartItemCount">0</span> itens)</h1>
+        <span class="cart-page__spacer" aria-hidden="true"></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="cart-page__main">
+    <div id="cartEmpty" class="cart-empty" hidden>
+      <p>Seu carrinho está vazio.</p>
+      <a href="index.html" class="btn btn--green">Continuar comprando</a>
+    </div>
+
+    <div id="cartContent" hidden>
+      <div class="cart-items" id="cartItemsList" aria-label="Itens do carrinho"></div>
+
+      <section class="cart-upsell" id="cartUpsell" aria-label="Complete sua produção">
+        <h2 class="cart-upsell__heading">Complete sua produção</h2>
+        <div class="cart-upsell__card">
+          <button type="button" class="cart-upsell__nav cart-upsell__prev" aria-label="Sugestão anterior">‹</button>
+          <div class="cart-upsell__body">
+            <div class="cart-upsell__thumb product-card__image product-card__image--fermento"></div>
+            <p class="cart-upsell__name">Coalho Líquido 500 ml</p>
+            <p class="cart-upsell__price">+ R$ 42,90</p>
+            <button type="button" class="btn btn--green cart-upsell__add">Adicionar</button>
+          </div>
+          <button type="button" class="cart-upsell__nav cart-upsell__next" aria-label="Próxima sugestão">›</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="cart-page__footer" id="cartFooter" hidden>
+    <div class="cart-page__total">
+      <span>Total</span>
+      <strong id="cartTotal">R$ 0,00</strong>
+    </div>
+    <button type="button" class="btn btn--green btn--checkout">Finalizar compra</button>
+    <p class="cart-page__demo-note">Demonstração — checkout não processa pagamento real.</p>
+  </footer>
+
+  <div class="toast" id="cartToast" role="status" aria-live="polite" hidden></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var footer = document.getElementById('cartFooter');
+      function syncFooter() {
+        var hasItems = window.RN_CART.getCartCount() > 0;
+        if (footer) footer.hidden = !hasItems;
+      }
+      syncFooter();
+      document.addEventListener('cart:updated', syncFooter);
+      document.querySelector('.btn--checkout').addEventListener('click', function () {
+        window.RN_CART.showToast('Checkout demonstrativo — integração ISET no site real.');
+      });
+    });
+  </script>
+</body>
+</html>

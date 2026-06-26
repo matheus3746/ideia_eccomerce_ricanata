@@ -3,6 +3,7 @@
 Página estática de demonstração para apresentar propostas de melhoria de UI/UX ao time de design do e-commerce [ricanata.com.br](https://ricanata.com.br).
 
 **Arquivos:** `index.html` + `styles.css`  
+**Referências de UX, lojas ISET e fluxo de compra:** [`REFERENCIAS.md`](REFERENCIAS.md)  
 **Como visualizar:** abra `index.html` no navegador ou sirva a pasta com um servidor local.
 
 ---
