@@ -185,4 +185,17 @@
     grid.addEventListener('scroll', updateBars, { passive: true });
     updateBars();
   });
+
+  var topBarTaglines = document.getElementById('topBarTaglines');
+  if (topBarTaglines) {
+    var taglineSlides = topBarTaglines.querySelectorAll('.top-bar__tagline');
+    if (taglineSlides.length > 1) {
+      var taglineIndex = 0;
+      setInterval(function () {
+        taglineSlides[taglineIndex].classList.remove('top-bar__tagline--active');
+        taglineIndex = (taglineIndex + 1) % taglineSlides.length;
+        taglineSlides[taglineIndex].classList.add('top-bar__tagline--active');
+      }, 5000);
+    }
+  }
 })();

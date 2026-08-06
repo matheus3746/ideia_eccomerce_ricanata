@@ -96,19 +96,33 @@ ul {
   margin-left: auto;
 }
 
-.top-bar__tagline {
+.top-bar__taglines {
   flex: 1 1 auto;
   min-width: 0;
+  display: grid;
+  place-items: center;
   text-align: center;
+}
+
+.top-bar__taglines .top-bar__tagline {
+  grid-area: 1 / 1;
+  min-width: 0;
+  max-width: min(90vw, 520px);
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   line-height: 1.2;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity 0.6s ease;
 }
 
-.top-bar__phone {
+.top-bar__taglines .top-bar__tagline--active {
+  opacity: 1;
+}
+
+.top-bar__email {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -117,11 +131,11 @@ ul {
   transition: opacity var(--transition);
 }
 
-.top-bar__phone:hover {
+.top-bar__email:hover {
   opacity: 0.85;
 }
 
-.top-bar__phone svg {
+.top-bar__email svg {
   width: 15px;
   height: 15px;
   fill: currentColor;
@@ -190,12 +204,15 @@ ul {
     min-height: 42px;
   }
 
-  .top-bar__tagline {
+  .top-bar__taglines {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     width: max-content;
     max-width: min(60%, 520px);
+  }
+
+  .top-bar__taglines .top-bar__tagline {
     font-size: 1.0625rem;
     letter-spacing: 0.08em;
   }
@@ -357,7 +374,7 @@ ul {
     flex-wrap: wrap;
   }
 
-  .top-bar__tagline {
+  .top-bar__taglines {
     flex: 1 1 100%;
     order: 1;
   }
@@ -375,7 +392,7 @@ ul {
     display: none;
   }
 
-  .top-bar__phone span {
+  .top-bar__email span {
     font-size: 0.75rem;
   }
 }
@@ -453,7 +470,7 @@ ul {
 
 .logo__img {
   display: block;
-  height: 88px;
+  height: 96px;
   width: auto;
   max-width: none;
   object-fit: contain;
@@ -461,11 +478,11 @@ ul {
 }
 
 .logo__img--footer {
-  height: 140px;
+  height: 155px;
 }
 
 .site-header.is-scrolled .logo__img {
-  height: 72px;
+  height: 78px;
 }
 
 .search {
@@ -579,11 +596,11 @@ ul {
   }
 
   .logo__img {
-    height: 110px;
+    height: 118px;
   }
 
   .site-header.is-scrolled .logo__img {
-    height: 90px;
+    height: 96px;
   }
 
   .header-action__label {
@@ -602,11 +619,11 @@ ul {
   }
 
   .logo__img {
-    height: 130px;
+    height: 142px;
   }
 
   .site-header.is-scrolled .logo__img {
-    height: 105px;
+    height: 112px;
   }
 
   .search input {
@@ -2223,13 +2240,13 @@ a.navbar__link {
 }
 
 .kit-card {
-  flex: 0 0 min(160px, 42vw);
+  flex: 0 0 min(200px, 46vw);
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-  padding: 1.25rem 1rem;
+  padding: 0.75rem;
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
@@ -2242,43 +2259,23 @@ a.navbar__link {
   transform: translateY(-2px);
 }
 
-.kit-card__logo {
+.kit-card__image {
   width: 100%;
   aspect-ratio: 1.4;
   border-radius: calc(var(--radius) - 2px);
   background: var(--gray-100);
-  position: relative;
-}
-
-.kit-card__logo::after {
-  position: absolute;
-  inset: 0;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  color: var(--gray-600);
-  text-align: center;
-  padding: 0.5rem;
 }
 
-.kit-card__logo--1 { background: linear-gradient(145deg, #fff5e0, #ffe8b0); }
-.kit-card__logo--1::after { content: 'Kit Artesanal'; }
-.kit-card__logo--2 { background: linear-gradient(145deg, #fce4ec, #f8bbd0); }
-.kit-card__logo--2::after { content: 'Cremosos'; }
-.kit-card__logo--3 { background: linear-gradient(145deg, #e3f2fd, #bbdefb); }
-.kit-card__logo--3::after { content: 'Análise'; }
-.kit-card__logo--4 { background: linear-gradient(145deg, #e8eaf6, #c5cae9); }
-.kit-card__logo--4::after { content: 'Prensa'; }
-.kit-card__logo--5 { background: linear-gradient(145deg, #f3e5f5, #e1bee7); }
-.kit-card__logo--5::after { content: 'Liras'; }
-.kit-card__logo--6 { background: linear-gradient(145deg, #fff8e1, #ffecb3); }
-.kit-card__logo--6::after { content: 'Formas'; }
-.kit-card__logo--7 { background: linear-gradient(145deg, #e0f2f1, #b2dfdb); }
-.kit-card__logo--7::after { content: 'Artesanal'; }
-.kit-card__logo--8 { background: linear-gradient(145deg, #ffebee, #ffcdd2); }
-.kit-card__logo--8::after { content: 'Eu Faço Queijo'; }
+.kit-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
 .kit-card__name {
   font-size: 0.8125rem;
