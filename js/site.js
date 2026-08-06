@@ -167,7 +167,61 @@
     });
   }
 
-  document.querySelectorAll('.product-scroll').forEach(function (wrap) {
+  document.querySelectorAll('.product-scroll--carousel').forEach(function (wrap) {
+    var grid = wrap.querySelector('.product-grid, .product-grid--3, .product-grid--4');
+    var barsWrap = wrap.querySelector('.product-scroll__bars');
+    var prev = wrap.querySelector('.product-scroll__nav--prev');
+    var next = wrap.querySelector('.product-scroll__nav--next');
+    if (!grid) return;
+
+    var cards = grid.querySelectorAll('.product-card');
+
+    if (barsWrap) {
+      barsWrap.innerHTML = '';
+      cards.forEach(function (_, i) {
+        var bar = document.createElement('span');
+        bar.className = 'product-scroll__bar' + (i === 0 ? ' product-scroll__bar--active' : '');
+        barsWrap.appendChild(bar);
+      });
+    }
+
+    var bars = barsWrap ? barsWrap.querySelectorAll('.product-scroll__bar') : [];
+
+    function scrollStep() {
+      var card = grid.querySelector('.product-card');
+      if (!card) return 0;
+      var gap = parseFloat(getComputedStyle(grid).gap) || 14;
+      return card.offsetWidth + gap;
+    }
+
+    function updateBars() {
+      if (!bars.length) return;
+      var step = scrollStep();
+      if (!step) return;
+      var index = Math.round(grid.scrollLeft / step);
+      index = Math.max(0, Math.min(index, bars.length - 1));
+      bars.forEach(function (bar, i) {
+        bar.classList.toggle('product-scroll__bar--active', i === index);
+      });
+    }
+
+    if (prev) {
+      prev.addEventListener('click', function () {
+        grid.scrollBy({ left: -scrollStep(), behavior: 'smooth' });
+      });
+    }
+
+    if (next) {
+      next.addEventListener('click', function () {
+        grid.scrollBy({ left: scrollStep(), behavior: 'smooth' });
+      });
+    }
+
+    grid.addEventListener('scroll', updateBars, { passive: true });
+    updateBars();
+  });
+
+  document.querySelectorAll('.product-scroll:not(.product-scroll--carousel)').forEach(function (wrap) {
     var grid = wrap.querySelector('.product-grid, .product-grid--3, .product-grid--4');
     var bars = wrap.querySelectorAll('.product-scroll__bar');
     if (!grid || !bars.length) return;

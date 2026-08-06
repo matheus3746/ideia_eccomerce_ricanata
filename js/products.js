@@ -51,6 +51,45 @@ window.RN_PRODUCTS = {
     rating: 4,
     reviews: 2
   },
+  'fermento-gorgonzola': {
+    id: 'fermento-gorgonzola',
+    name: 'Fermento para Gorgonzola',
+    shortDesc: 'Cultura para queijos azuis e veios característicos.',
+    price: 89.9,
+    brand: 'Ciência do Leite',
+    ref: 'PRDD1201',
+    image: 'fermento',
+    type: 'fermento',
+    volumes: ['20 Litros', '50 Litros', '100 Litros', '200 Litros'],
+    rating: 5,
+    reviews: 6
+  },
+  'fermento-prato': {
+    id: 'fermento-prato',
+    name: 'Fermento para Queijo Prato',
+    shortDesc: 'Fermento mesófilo para queijo prato e coalho artesanal.',
+    price: 54.5,
+    brand: 'Ciência do Leite',
+    ref: 'PRDD1210',
+    image: 'fermento',
+    type: 'fermento',
+    volumes: ['20 Litros', '50 Litros', '100 Litros', '150 Litros'],
+    rating: 5,
+    reviews: 4
+  },
+  'fermento-coalho': {
+    id: 'fermento-coalho',
+    name: 'Fermento para Coalho Artesanal',
+    shortDesc: 'Cultura específica para produção de coalho tipo minas.',
+    price: 48.9,
+    brand: 'Ciência do Leite',
+    ref: 'PRDD1222',
+    image: 'fermento',
+    type: 'fermento',
+    volumes: ['20 Litros', '50 Litros', '100 Litros'],
+    rating: 4,
+    reviews: 3
+  },
   'tanque-100': {
     id: 'tanque-100',
     name: 'Tanque de Queijo 100 Litros',
